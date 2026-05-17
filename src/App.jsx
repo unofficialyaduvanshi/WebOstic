@@ -132,6 +132,14 @@ function HomePage() {
    MAIN APP
 ========================= */
 export default function App() {
+  useEffect(() => {
+    const color = "#695681";
+
+    // keep background consistent (safe fallback)
+    document.documentElement.style.background = color;
+    document.body.style.background = color;
+  }, []);
+
   return (
     <BrowserRouter>
       {/* ✅ SEO FIX (ADDED ONLY THIS) */}
