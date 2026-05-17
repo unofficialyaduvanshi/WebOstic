@@ -81,7 +81,8 @@ function Layout({ children }) {
     <div
       style={{
         minHeight: "100vh",
-        background: "var(--bg)",
+        // background: "var(--bg)",
+        background: "#695681",
         position: "relative",
         overflow: "hidden",
       }}
@@ -132,14 +133,6 @@ function HomePage() {
    MAIN APP
 ========================= */
 export default function App() {
-  useEffect(() => {
-    const color = "#695681";
-
-    // keep background consistent (safe fallback)
-    document.documentElement.style.background = color;
-    document.body.style.background = color;
-  }, []);
-
   return (
     <BrowserRouter>
       {/* ✅ SEO FIX (ADDED ONLY THIS) */}
