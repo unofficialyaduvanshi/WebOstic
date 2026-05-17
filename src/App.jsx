@@ -320,7 +320,7 @@ function Layout({ children }) {
     <div
       style={{
         minHeight: "100vh",
-        background: "#695681",
+        background: "transparent", // ✅ FIX
         position: "relative",
         overflow: "hidden",
       }}
@@ -330,7 +330,7 @@ function Layout({ children }) {
         style={{
           position: "fixed",
           inset: 0,
-          background: "#695681",
+          background: "#0f0f0f", // or white
           zIndex: -10,
         }}
       />
