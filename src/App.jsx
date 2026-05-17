@@ -132,10 +132,6 @@ function HomePage() {
    MAIN APP
 ========================= */
 export default function App() {
-  useEffect(() => {
-    document.documentElement.style.background = "#695681";
-    document.body.style.background = "#695681";
-  }, []);
   return (
     <BrowserRouter>
       {/* ✅ SEO FIX (ADDED ONLY THIS) */}
