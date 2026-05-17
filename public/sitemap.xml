@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://webostic.in/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://webostic.in/about</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://webostic.in/services</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Portfolio -->
+  <url>
+    <loc>https://webostic.in/portfolio</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://webostic.in/blog/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://webostic.in/contact</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Example Blog Posts -->
+  <url>
+    <loc>https://webostic.in/blog/website-development-cost-india-2026</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://webostic.in/blog/how-to-create-website-india</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts -->
+
+<url>
+  <loc>https://webostic.in/blog/website-development-cost-india-2026</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/how-to-create-website-india</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/seo-for-beginners-india</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/website-design-trends-2026</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/why-business-needs-website</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/website-mistakes-to-avoid</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/benefits-of-responsive-design</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/seo-vs-paid-ads-india</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/how-long-to-build-website</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://webostic.in/blog/portfolio-website-cost-india</loc>
+  <lastmod>2026-05-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+</urlset>

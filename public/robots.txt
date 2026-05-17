@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow unnecessary paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+
+# Sitemap location
+Sitemap: https://webostic.in/sitemap.xml
