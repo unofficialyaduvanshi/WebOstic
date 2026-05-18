@@ -112,6 +112,7 @@ export default function CTASection() {
           </p>
 
           {/* Buttons */}
+
           <div
             // className="
             //     relative
@@ -133,86 +134,135 @@ export default function CTASection() {
             className="
     relative
     z-10
-    mt-5
+    mt-1
     pt-2
     flex
     flex-row
-    items-center
+    items-stretch
     justify-center
-    gap-2
-    sm:gap-6
+    gap-3 sm:gap-6
     w-full
-    px-2
+    px-4 sm:px-6
+    box-border
+
+     max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto
   "
           >
             {/* Primary */}
             <button
               onClick={() => navigate("/contact")}
+              // className="
+              //   group/btn
+              //   inline-flex
+              //   shrink-0
+              //   whitespace-nowrap
+              //   min-w-[160px]
+              //   items-center
+              //   justify-center
+              //   gap-2
+              //   rounded-2xl
+              //   bg-gradient-to-r
+              //   from-sky-500
+              //   to-cyan-400
+              //   px-4
+              //   sm:px-8
+              //   py-3
+              //   sm:py-4
+              //   text-[13px]
+              //   sm:text-[15px]
+              //   font-bold
+              //   text-white
+
+              //   transition-all
+              //   duration-300
+              //   hover:-translate-y-1
+              //   hover:brightness-110
+              // "
+
               className="
-                group/btn
-                inline-flex
-                shrink-0 
-                whitespace-nowrap
-                min-w-[160px]
-                items-center
-                justify-center
-                gap-2
-                rounded-2xl
-                bg-gradient-to-r
-                from-sky-500
-                to-cyan-400
-                px-4
-                sm:px-8
-                py-3
-                sm:py-4
-                text-[13px]
-                sm:text-[15px]
-                font-bold
-                text-white
-               
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:brightness-110
-              "
+  group/btn
+  flex-1
+  min-w-0
+  inline-flex
+  items-center
+  justify-center
+  rounded-2xl
+  bg-gradient-to-r
+  from-sky-500
+  to-cyan-400
+  px-6 sm:px-6
+  py-3
+  text-[12px] sm:text-[15px]
+  font-bold
+  text-white
+  whitespace-nowrap
+     transition-all
+                 duration-300
+                 hover:-translate-y-1
+                 hover:brightness-110
+"
             >
               Start Your Project
               <ArrowRight
                 size={18}
-                className="transition-transform duration-300 group-hover/btn:translate-x-1"
+                className="shrink-0 transition-transform duration-300 group-hover/btn:translate-x-1"
               />
             </button>
             {/* Secondary */}
             <button
               onClick={() => navigate("/pricing")}
+              // className="
+              //   inline-flex
+
+              //   shrink-0
+              //   whitespace-nowrap
+              //   min-w-[160px]
+              //   items-center
+              //   justify-center
+              //   rounded-2xl
+              //   border
+              //   border-white/10
+              //   bg-white/[0.04]
+              //  px-4
+              //   sm:px-8
+              //   py-3
+              //   sm:py-4
+              //   text-[13px]
+              //   sm:text-[15px]
+              //   font-bold
+              //   text-white
+              //   backdrop-blur-xl
+              //   transition-all
+              //   duration-300
+              //   hover:-translate-y-1
+              //   hover:border-sky-400/30
+              //   hover:bg-sky-500/[0.08]
+              //   hover:text-cyan-200
+              // "
+
               className="
-                inline-flex
-                
-                shrink-0 
-                whitespace-nowrap
-                min-w-[160px]
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/[0.04]
-               px-4
-                sm:px-8
-                py-3
-                sm:py-4
-                text-[13px]
-                sm:text-[15px]
-                font-bold
-                text-white
-                backdrop-blur-xl
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-sky-400/30
-                hover:bg-sky-500/[0.08]
-                hover:text-cyan-200
-              "
+  flex-1
+  min-w-0
+  inline-flex
+  items-center
+  justify-center
+  rounded-2xl
+  border
+  border-white/10
+  bg-white/[0.04]
+  px-3 sm:px-6
+  py-3
+  text-[12px] sm:text-[15px]
+  font-bold
+  text-white
+  whitespace-nowrap
+      transition-all
+                 duration-300
+                 hover:-translate-y-1
+                 hover:border-sky-400/30
+                 hover:bg-sky-500/[0.08]
+                 hover:text-cyan-200
+"
             >
               View Pricing
             </button>

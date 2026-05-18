@@ -940,113 +940,139 @@ transition-all duration-300
                 //     pb-2
 
                 // "
-                className="
-    relative
-    z-10
-    mt-5
-    pt-2
-    flex
-    flex-row
-    items-center
-    justify-center
-    gap-2
-    sm:gap-6
-    w-full
-    px-2
-  "
+
+                className="relative z-10 mt-5 w-full flex justify-center px-4"
               >
-                {/* Primary */}
-                <button
-                  onClick={() => {
-                    const businessPlan = PRICING_PLANS.find(
-                      (p) => p.price === "₹4,999",
-                    );
+                <div className="flex w-full max-w-[360px] items-center gap-3">
+                  {/* Primary */}
+                  <button
+                    onClick={() => {
+                      const businessPlan = PRICING_PLANS.find(
+                        (p) => p.price === "₹4,999",
+                      );
 
-                    setSelectedPlan(businessPlan);
-                    setShowPopup(true);
-                    // 🔥 GA4 HERE
-                    if (window.gtag) {
-                      window.gtag("event", "pricing_cta_click", {
-                        button: "get_started_today",
-                        plan: businessPlan?.name,
-                      });
-                    }
-                  }}
-                  className="
-            group/btn
-            inline-flex
-            shrink-0 
-            whitespace-nowrap
-            min-w-[160px]
-            items-center
-            justify-center
-            gap-2
-            rounded-2xl
-            bg-gradient-to-r
-            from-sky-500
-            to-cyan-400
-            px-3
-            sm:px-8
-            py-3
-            sm:py-4
-            text-[13px]
-            sm:text-[15px]
-            font-bold
-            text-white
-           
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:brightness-110
-          "
-                >
-                  Get Started Today
-                  <ArrowRight
-                    size={18}
-                    className="transition-transform duration-300 group-hover/btn:translate-x-1"
-                  />
-                </button>
-                {/* Secondary */}
-                <button
-                  onClick={() => {
-                    const customPlan = PRICING_PLANS.find(
-                      (p) => p.id === "custom",
-                    );
+                      setSelectedPlan(businessPlan);
+                      setShowPopup(true);
+                      // 🔥 GA4 HERE
+                      if (window.gtag) {
+                        window.gtag("event", "pricing_cta_click", {
+                          button: "get_started_today",
+                          plan: businessPlan?.name,
+                        });
+                      }
+                    }}
+                    //         className="
+                    //   group/btn
+                    //   inline-flex
+                    //   shrink-0
+                    //   whitespace-nowrap
+                    //   min-w-[160px]
+                    //   items-center
+                    //   justify-center
+                    //   gap-2
+                    //   rounded-2xl
+                    //   bg-gradient-to-r
+                    //   from-sky-500
+                    //   to-cyan-400
+                    //   px-3
+                    //   sm:px-8
+                    //   py-3
+                    //   sm:py-4
+                    //   text-[13px]
+                    //   sm:text-[15px]
+                    //   font-bold
+                    //   text-white
 
-                    setSelectedPlan(customPlan);
-                    setShowPopup(true);
-                  }}
-                  className="
-            inline-flex
-            
-            shrink-0 
-            whitespace-nowrap
-            min-w-[160px]
-            items-center
-            justify-center
-            rounded-2xl
-            border
-            border-white/10
-            bg-white/[0.04]
-           px-3
-            sm:px-8
-            py-3
-            sm:py-4
-            text-[13px]
-            sm:text-[15px]
-            font-bold
-            text-white
-            backdrop-blur-xl
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:border-sky-400/30
-            hover:bg-sky-500/[0.08]
-            hover:text-cyan-200
-          "
-                >
-                  Discuss Custom Project
-                </button>
+                    //   transition-all
+                    //   duration-300
+                    //   hover:-translate-y-1
+                    //   hover:brightness-110
+                    // "
+
+                    className="
+        flex-1
+        min-w-0
+        overflow-hidden
+        inline-flex items-center justify-center gap-1
+        rounded-2xl
+        bg-gradient-to-r from-sky-500 to-cyan-400
+        px-6 py-3
+        text-[12px] sm:text-[15px] font-bold text-white
+        whitespace-nowrap
+        transition-all
+                       duration-300
+                       hover:-translate-y-1
+                       hover:brightness-110
+      "
+                  >
+                    Get Started Today
+                    <ArrowRight
+                      size={18}
+                      className=" shrink-0 transition-transform duration-300 group-hover/btn:translate-x-1"
+                    />
+                  </button>
+                  {/* Secondary */}
+                  <button
+                    onClick={() => {
+                      const customPlan = PRICING_PLANS.find(
+                        (p) => p.id === "custom",
+                      );
+
+                      setSelectedPlan(customPlan);
+                      setShowPopup(true);
+                    }}
+                    //         className="
+                    //   inline-flex
+
+                    //   shrink-0
+                    //   whitespace-nowrap
+                    //   min-w-[160px]
+                    //   items-center
+                    //   justify-center
+                    //   rounded-2xl
+                    //   border
+                    //   border-white/10
+                    //   bg-white/[0.04]
+                    //  px-3
+                    //   sm:px-8
+                    //   py-3
+                    //   sm:py-4
+                    //   text-[13px]
+                    //   sm:text-[15px]
+                    //   font-bold
+                    //   text-white
+                    //   backdrop-blur-xl
+                    //   transition-all
+                    //   duration-300
+                    //   hover:-translate-y-1
+                    //   hover:border-sky-400/30
+                    //   hover:bg-sky-500/[0.08]
+                    //   hover:text-cyan-200
+                    // "
+
+                    className="
+        flex-1
+        min-w-0
+        overflow-hidden
+        inline-flex items-center justify-center
+        rounded-2xl
+        border border-white/10
+        bg-white/5
+        px-4 py-3
+        text-[12px] sm:text-[15px] font-bold text-white
+        whitespace-nowrap
+          backdrop-blur-xl
+                       transition-all
+                       duration-300
+                       hover:-translate-y-1
+                       hover:border-sky-400/30
+                       hover:bg-sky-500/[0.08]
+                       hover:text-cyan-200
+      "
+                  >
+                    Discuss Project
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>
