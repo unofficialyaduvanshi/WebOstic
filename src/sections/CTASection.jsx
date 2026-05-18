@@ -113,22 +113,37 @@ export default function CTASection() {
 
           {/* Buttons */}
           <div
+            // className="
+            //     relative
+            //     z-10
+            //     mt-5
+            //     pt-2
+            //     flex
+            //     flex-nowrap
+            //     items-center
+            //     justify-center
+            //     gap-4
+            //     md:gap-8
+            //     overflow-x-auto
+            //     overflow-y-visible
+            //     pb-2
+
+            // "
+
             className="
-                relative
-                z-10
-                mt-5
-                pt-2
-                flex
-                flex-nowrap
-                items-center
-                justify-center
-                gap-4
-                md:gap-8
-                overflow-x-auto
-                overflow-y-visible
-                pb-2
-              
-            "
+    relative
+    z-10
+    mt-5
+    pt-2
+    flex
+    flex-row
+    items-center
+    justify-center
+    gap-2
+    sm:gap-6
+    w-full
+    px-2
+  "
           >
             {/* Primary */}
             <button

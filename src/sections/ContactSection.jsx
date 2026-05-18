@@ -389,7 +389,7 @@ export default function ContactSection() {
                     )}
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-row gap-3">
                     <button
                       type="submit"
                       disabled={loading}
