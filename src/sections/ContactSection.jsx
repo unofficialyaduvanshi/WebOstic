@@ -139,8 +139,8 @@ export default function ContactSection() {
   };
 
   const info = [
-    { Icon: I.Mail, label: "Email Us", val: "hello@webostic.com" },
-    { Icon: I.Phone, label: "Call / WA", val: "+91 99999 99999" },
+    { Icon: I.Mail, label: "Email Us", val: "webostic.dev@gmail.com" },
+    { Icon: I.Phone, label: "Call / WhatsApp", val: "+91 9310418876" },
     { Icon: I.Map, label: "Location", val: "Remote — Worldwide" },
   ];
 
