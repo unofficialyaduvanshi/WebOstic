@@ -67,23 +67,27 @@ export default function HeroSection() {
   // const [busy, setBusy] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <section id="home" className="relative overflow-hidden pt-8 pb-10">
       {/* Video BG */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 h-full w-full object-cover scale-110 animate-[heroZoom_20s_linear_infinite]"
-      >
-        <source src="/video.mp4" type="video/mp4" />
-      </video>
+      {!isMobile && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          className="hero-video absolute inset-0 h-full w-full object-cover scale-110 animate-[heroZoom_20s_linear_infinite]"
+        >
+          <source src="/video1.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0b0e1a] via-[#0d1229] to-[#0a1a2e]" />
+        <div className="absolute inset-0 " />
 
         <div className="absolute -top-[10%] -left-[5%] h-[600px] w-[600px] rounded-full blur-[40px] opacity-70 bg-[radial-gradient(circle,rgba(29,140,248,0.22)_0%,transparent_70%)] animate-[float_8s_ease-in-out_infinite]" />
 

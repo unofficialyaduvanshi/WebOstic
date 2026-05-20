@@ -264,12 +264,12 @@ export default function SitePlexusBackground() {
     const updateMobileScene = () => {
       ctx.clearRect(0, 0, width, height);
 
-      const scrollY = window.scrollY || window.pageYOffset || 0;
-      const isHomePage = window.location.pathname === "/";
+      // const scrollY = window.scrollY || window.pageYOffset || 0;
+      // const isHomePage = window.location.pathname === "/";
 
-      const shouldHideForHero = isHomePage && scrollY < config.heroHideHeight;
+      // const shouldHideForHero = isHomePage && scrollY < config.heroHideHeight;
 
-      if (shouldHideForHero) return;
+      // if (shouldHideForHero) return;
 
       ensureMeteorCount();
       drawMobileGlowDots();
@@ -485,3 +485,228 @@ export default function SitePlexusBackground() {
     </div>
   );
 }
+
+// without particle in mobile
+
+// // src/components/SitePlexusBackground.jsx
+// import React, { useEffect, useRef, useState } from "react";
+
+// export default function SitePlexusBackground() {
+//   const wrapRef = useRef(null);
+//   const canvasRef = useRef(null);
+//   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 767);
+
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setIsMobile(window.innerWidth <= 767);
+//     };
+
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   useEffect(() => {
+//     // 🔥 STOP EVERYTHING on mobile
+//     if (isMobile) return;
+
+//     const wrap = wrapRef.current;
+//     const canvas = canvasRef.current;
+//     if (!wrap || !canvas) return;
+
+//     const ctx = canvas.getContext("2d");
+//     if (!ctx) return;
+
+//     let width = 0;
+//     let height = 0;
+//     let dpr = 1;
+//     let animationId = 0;
+//     let resizeObserver = null;
+//     let isPaused = false;
+
+//     const CYAN = "64,224,255";
+//     const WHITE = "255,255,255";
+
+//     const pointer = {
+//       x: -9999,
+//       y: -9999,
+//       active: false,
+//     };
+
+//     let particles = [];
+//     let config = null;
+
+//     let lastTime = 0;
+//     const FPS = 35;
+//     const FRAME_TIME = 1000 / FPS;
+
+//     const rand = (min, max) => Math.random() * (max - min) + min;
+
+//     const setCanvasSize = () => {
+//       const rect = wrap.getBoundingClientRect();
+//       width = Math.max(1, Math.floor(rect.width));
+//       height = Math.max(1, Math.floor(rect.height));
+
+//       dpr = Math.min(window.devicePixelRatio || 1, 1.4);
+
+//       canvas.width = Math.floor(width * dpr);
+//       canvas.height = Math.floor(height * dpr);
+//       canvas.style.width = `${width}px`;
+//       canvas.style.height = `${height}px`;
+
+//       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+//     };
+
+//     const getConfig = () => {
+//       return {
+//         count: 70,
+//         linkDistance: 105,
+//         grabDistance: 120,
+//         speed: 0.34,
+//         opacity: 0.18,
+//         pushCount: 5,
+//         minSize: 1.3,
+//         maxSize: 3,
+//       };
+//     };
+
+//     const createParticle = (x = rand(0, width), y = rand(0, height)) => {
+//       const angle = Math.random() * Math.PI * 2;
+//       const speed = rand(config.speed * 0.45, config.speed);
+
+//       return {
+//         x,
+//         y,
+//         vx: Math.cos(angle) * speed,
+//         vy: Math.sin(angle) * speed,
+//         size: rand(config.minSize, config.maxSize),
+//         alpha: rand(0.28, 0.5),
+//       };
+//     };
+
+//     const buildParticles = () => {
+//       config = getConfig();
+
+//       particles = Array.from({ length: config.count }, () => createParticle());
+//     };
+
+//     const drawParticle = (p) => {
+//       ctx.beginPath();
+//       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+//       ctx.fillStyle = `rgba(${CYAN},${p.alpha})`;
+//       ctx.fill();
+//     };
+
+//     const drawLine = (x1, y1, x2, y2, alpha) => {
+//       ctx.beginPath();
+//       ctx.moveTo(x1, y1);
+//       ctx.lineTo(x2, y2);
+//       ctx.strokeStyle = `rgba(${WHITE},${alpha})`;
+//       ctx.lineWidth = 1;
+//       ctx.stroke();
+//     };
+
+//     const updateScene = () => {
+//       ctx.clearRect(0, 0, width, height);
+
+//       const linkDistanceSq = config.linkDistance * config.linkDistance;
+
+//       for (let i = 0; i < particles.length; i++) {
+//         const p = particles[i];
+
+//         p.x += p.vx;
+//         p.y += p.vy;
+
+//         if (p.x < -20) p.x = width + 20;
+//         if (p.x > width + 20) p.x = -20;
+//         if (p.y < -20) p.y = height + 20;
+//         if (p.y > height + 20) p.y = -20;
+
+//         drawParticle(p);
+
+//         for (let j = i + 1; j < particles.length; j++) {
+//           const q = particles[j];
+//           const dx = p.x - q.x;
+//           const dy = p.y - q.y;
+//           const distSq = dx * dx + dy * dy;
+
+//           if (distSq < linkDistanceSq) {
+//             const dist = Math.sqrt(distSq);
+//             const alpha = (1 - dist / config.linkDistance) * config.opacity;
+//             drawLine(p.x, p.y, q.x, q.y, alpha);
+//           }
+//         }
+//       }
+//     };
+
+//     const animate = (time = 0) => {
+//       if (isPaused) {
+//         animationId = requestAnimationFrame(animate);
+//         return;
+//       }
+
+//       const delta = time - lastTime;
+
+//       if (delta >= FRAME_TIME) {
+//         lastTime = time;
+//         updateScene();
+//       }
+
+//       animationId = requestAnimationFrame(animate);
+//     };
+
+//     const init = () => {
+//       setCanvasSize();
+//       buildParticles();
+//       cancelAnimationFrame(animationId);
+//       lastTime = 0;
+//       animate();
+//     };
+
+//     const handleVisibility = () => {
+//       isPaused = document.hidden;
+//     };
+
+//     init();
+
+//     resizeObserver = new ResizeObserver(init);
+//     resizeObserver.observe(wrap);
+
+//     window.addEventListener("resize", init);
+//     document.addEventListener("visibilitychange", handleVisibility);
+
+//     return () => {
+//       cancelAnimationFrame(animationId);
+//       resizeObserver?.disconnect();
+//       window.removeEventListener("resize", init);
+//       document.removeEventListener("visibilitychange", handleVisibility);
+//     };
+//   }, [isMobile]);
+
+//   // 🔥 REMOVE ENTIRE COMPONENT ON MOBILE
+//   if (isMobile) return null;
+
+//   return (
+//     <div
+//       ref={wrapRef}
+//       aria-hidden="true"
+//       style={{
+//         position: "absolute",
+//         inset: 0,
+//         zIndex: 0,
+//         pointerEvents: "none",
+//         overflow: "hidden",
+//         width: "100%",
+//         height: "100%",
+//       }}
+//     >
+//       <canvas
+//         ref={canvasRef}
+//         style={{
+//           display: "block",
+//           width: "100%",
+//           height: "100%",
+//         }}
+//       />
+//     </div>
+//   );
+// }

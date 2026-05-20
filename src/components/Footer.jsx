@@ -4,7 +4,17 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { I } from "./Icon";
 
+// import React, { useEffect, useState } from "react";
+
 export default function Footer() {
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // useEffect(() => {
+  //   const handleResize = () => setIsMobile(window.innerWidth <= 768);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -70,17 +80,19 @@ export default function Footer() {
         position: "relative",
         overflow: "hidden",
         borderTop: "1px solid var(--border)",
-        background: "var(--bg2)",
+        // background: "var(--bg2)",
+        // background: "linear-gradient(180deg, var(--bg2), #080c14)",
         padding: "clamp(48px, 8vw, 80px) 0 28px",
       }}
     >
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
+        // preload="none"
         style={{
           position: "absolute",
           inset: 0,
@@ -90,8 +102,29 @@ export default function Footer() {
           zIndex: 0,
         }}
       >
-        <source src="/footer.mp4" type="video/mp4" />
-      </video>
+        <source src="/footer2.mp4" type="video/mp4" />
+      </video> */}
+
+      {window.innerWidth > 768 && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          className="footer-video"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+        >
+          <source src="/footer2.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* Overlay */}
       <div

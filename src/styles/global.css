@@ -772,3 +772,15 @@ body {
     align-items: center;
   }
 }
+
+.hero-video,
+.footer-video {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-video,
+  .footer-video {
+    display: none !important;
+  }
+}

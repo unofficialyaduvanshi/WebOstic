@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 import PortfolioSection from "../sections/PortfolioSection";
 
 export default function PortfolioPage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <PortfolioSection />
       {/* <Footer /> */}
     </>

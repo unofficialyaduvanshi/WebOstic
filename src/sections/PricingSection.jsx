@@ -189,7 +189,7 @@ export default function PricingSection() {
         </div>
 
         <div className="relative z-10 ">
-          <div className="w-full px-5 sm:px-6 lg:px-8 text-center">
+          <div className="w-full  px-5 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
