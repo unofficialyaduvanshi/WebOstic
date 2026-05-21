@@ -280,6 +280,8 @@ import FAQ from "./sections/FAQ";
 import { initGA, trackPageView } from "./lib/analytics";
 import useSEO from "./seo/useSEO";
 
+import { useState } from "react";
+
 /* =========================
    GA4 TRACKING COMPONENT
 ========================= */
@@ -309,6 +311,18 @@ function SEOController() {
    LAYOUT (NO CHANGE)
 ========================= */
 function Layout({ children }) {
+  // for <SitePlexusBackground />
+
+  const [showBg, setShowBg] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBg(true);
+    }, 2000); // delay background
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
       style={{
@@ -329,7 +343,7 @@ function Layout({ children }) {
 
       <Navbar />
 
-      <div
+      {/* <div
         style={{
           position: "fixed",
           inset: 0,
@@ -338,7 +352,21 @@ function Layout({ children }) {
         }}
       >
         <SitePlexusBackground />
-      </div>
+      </div> */}
+
+      {/* ✅ DELAYED BACKGROUND */}
+      {showBg && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        >
+          <SitePlexusBackground />
+        </div>
+      )}
 
       <div style={{ position: "relative", zIndex: 2 }}>{children}</div>
 
