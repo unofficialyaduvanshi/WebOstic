@@ -237,10 +237,9 @@
 //     </BrowserRouter>
 //   );
 // }
-
 // seo
 
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense, useState } from "react";
 import "./styles/global.css";
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -251,9 +250,7 @@ import WAButton from "./components/WAButton";
 import SitePlexusBackground from "./components/SitePlexusBackground";
 import ScrollToTop from "./components/ScrollToTop";
 
-// ❌ REMOVE normal imports of pages
-// ✅ ADD lazy imports
-
+// ✅ Lazy load pages
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
 const PricingPage = lazy(() => import("./pages/PricingPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -264,23 +261,23 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Sections (optional lazy - keep as is for safety)
+// ✅ Lazy load BELOW-FOLD sections (IMPORTANT NOW)
+const TechSection = lazy(() => import("./sections/TechSection"));
+const ServicesSection = lazy(() => import("./sections/ServicesSection"));
+const TrustSection = lazy(() => import("./sections/TrustSection"));
+const Industries = lazy(() => import("./sections/Industries"));
+const ProcessSection = lazy(() => import("./sections/ProcessSection"));
+const Deliverables = lazy(() => import("./sections/Deliverables"));
+const ReviewsSection = lazy(() => import("./sections/ReviewsSection"));
+const FAQ = lazy(() => import("./sections/FAQ"));
+const CTASection = lazy(() => import("./sections/CTASection"));
+
+// ✅ Keep above-the-fold sections normal
 import HeroSection from "./sections/HeroSection";
-import TechSection from "./sections/TechSection";
-import ServicesSection from "./sections/ServicesSection";
-import TrustSection from "./sections/TrustSection";
-import ProcessSection from "./sections/ProcessSection";
-import ReviewsSection from "./sections/ReviewsSection";
-import CTASection from "./sections/CTASection";
 import HeroStats from "./sections/HeroStats";
-import Industries from "./sections/Industries";
-import Deliverables from "./sections/Deliverables";
-import FAQ from "./sections/FAQ";
 
 import { initGA, trackPageView } from "./lib/analytics";
 import useSEO from "./seo/useSEO";
-
-import { useState } from "react";
 
 /* =========================
    GA4 TRACKING COMPONENT
@@ -308,17 +305,15 @@ function SEOController() {
 }
 
 /* =========================
-   LAYOUT (NO CHANGE)
+   LAYOUT
 ========================= */
 function Layout({ children }) {
-  // for <SitePlexusBackground />
-
   const [showBg, setShowBg] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBg(true);
-    }, 2000); // delay background
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -343,18 +338,7 @@ function Layout({ children }) {
 
       <Navbar />
 
-      {/* <div
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        <SitePlexusBackground />
-      </div> */}
-
-      {/* ✅ DELAYED BACKGROUND */}
+      {/* ✅ Delayed background */}
       {showBg && (
         <div
           style={{
@@ -377,22 +361,26 @@ function Layout({ children }) {
 }
 
 /* =========================
-   HOME PAGE (NO CHANGE)
+   HOME PAGE
 ========================= */
 function HomePage() {
   return (
     <>
       <HeroSection />
       <HeroStats />
-      <TechSection />
-      <ServicesSection />
-      <TrustSection />
-      <Industries />
-      <ProcessSection />
-      <Deliverables />
-      <ReviewsSection />
-      <FAQ />
-      <CTASection />
+
+      {/* ✅ Lazy loaded sections */}
+      <Suspense fallback={null}>
+        <TechSection />
+        <ServicesSection />
+        <TrustSection />
+        <Industries />
+        <ProcessSection />
+        <Deliverables />
+        <ReviewsSection />
+        <FAQ />
+        <CTASection />
+      </Suspense>
     </>
   );
 }
@@ -407,7 +395,6 @@ export default function App() {
       <AnalyticsTracker />
       <ScrollToTop />
 
-      {/* ✅ ADD Suspense here */}
       <Suspense
         fallback={
           <div
