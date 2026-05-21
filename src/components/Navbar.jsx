@@ -66,9 +66,9 @@ export default function Navbar() {
     } else if (location.pathname === "/pricing") {
       setActive("services");
       // blog new
-    } else if (location.pathname === "/blog") {
-      setActive("blog");
-    } else if (location.pathname.startsWith("/blog/")) {
+      // } else if (location.pathname === "/blog") {
+      //   setActive("blog");
+    } else if (location.pathname.startsWith("/blog")) {
       setActive("blog");
       // about
     } else if (location.pathname === "/about") {

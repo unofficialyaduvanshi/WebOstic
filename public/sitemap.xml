@@ -31,7 +31,7 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://webostic.in/blog/</loc>
+    <loc>https://webostic.in/blog</loc>
     <lastmod>2026-05-18</lastmod>
     <priority>0.9</priority>
   </url>
@@ -43,18 +43,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Example Blog Posts -->
-  <url>
-    <loc>https://webostic.in/blog/website-development-cost-india-2026</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webostic.in/blog/how-to-create-website-india</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Blog Posts -->
 
