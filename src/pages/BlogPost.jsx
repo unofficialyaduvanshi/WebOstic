@@ -1119,6 +1119,25 @@ const BlogPost = () => {
               </div>
             </div>
 
+            {/* Back Button */}
+            <div className="max-w-6xl mx-auto px-6 pt-5">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg transition-all duration-300 hover:text-cyan-300 hover:gap-3"
+              >
+                ← Back
+              </Link>
+            </div>
+
+            <div className="max-w-6xl mx-auto px-6 pt-5">
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg transition-all duration-300 hover:text-cyan-300 hover:gap-3"
+              >
+                ← Back to Home
+              </Link>
+            </div>
+
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
               <div className="mt-16 border-t border-cyan-500/10 pt-10">
