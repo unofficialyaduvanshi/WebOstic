@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Award, Users, TrendingUp, Clock } from "lucide-react";
 
-function CountUp({ end, duration = 2200, suffix = "" }) {
+function CountUp({ end, duration = 700, suffix = "" }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
