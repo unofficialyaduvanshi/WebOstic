@@ -121,17 +121,17 @@ export default function ContactSection() {
     setErrs(e);
     if (Object.keys(e).length) return;
 
-    setBusy(true);
+    // setBusy(true);
     setTimeout(() => {
       setSent(true);
-      setBusy(false);
+      // setBusy(false);
       localStorage.removeItem("webostic_plan");
       show("✅ Message sent! We’ll reply within 24 hours.");
     }, 10);
   };
 
   const openWA = () => {
-    const msg = `Hi Webostic! My name is ${contactForm.name || "..."} and I'd like to discuss a project.`;
+    const msg = `Hi Webostic team, I’d like to discuss a project for my business. Could you please let me know how we can proceed?`;
     window.open(
       `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,
       "_blank",
