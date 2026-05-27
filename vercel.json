@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "https://webostic.in/:path*",
+      "destination": "https://www.webostic.in/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

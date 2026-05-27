@@ -20,7 +20,7 @@ export default function ReviewsSection() {
     const { data, error } = await supabase
       .from("reviews")
       .select("*")
-      .eq("approved", true)
+      .eq("approved", true) // new line
       .order("created_at", { ascending: false });
 
     if (error) {
