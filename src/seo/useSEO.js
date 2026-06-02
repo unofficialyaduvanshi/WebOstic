@@ -41,7 +41,7 @@ export default function useSEO() {
     setMeta("og:title", seo.ogTitle || seo.title, "property");
     setMeta("og:description", seo.ogDescription || seo.description, "property");
     setMeta("og:type", "website", "property");
-    setMeta("og:url", `https://webostic.in${path}`, "property");
+    setMeta("og:url", `https://www.webostic.in${path}`, "property");
 
     // ✅ Twitter
     setMeta("twitter:card", "summary_large_image");
@@ -55,7 +55,7 @@ export default function useSEO() {
       link.setAttribute("rel", "canonical");
       document.head.appendChild(link);
     }
-    link.setAttribute("href", `https://webostic.in${path}`);
+    link.setAttribute("href", `https://www.webostic.in${path}`);
 
     // ✅ JSON-LD (CLEAN UPDATE)
     const oldScript = document.getElementById("json-ld");

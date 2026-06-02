@@ -12,8 +12,8 @@ export const seoConfig = {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "WebOstic",
-      url: "https://webostic.in",
-      logo: "https://webostic.in/logo.png",
+      url: "https://www.webostic.in",
+      logo: "https://www.webostic.in/logo.png",
     },
   },
 
@@ -97,8 +97,8 @@ export const seoConfig = {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "WebOstic",
-      url: "https://webostic.in/about",
-      logo: "https://webostic.in/logo.png",
+      url: "https://www.webostic.in/about",
+      logo: "https://www.webostic.in/logo.png",
     },
   },
 

@@ -29,7 +29,7 @@ export default function Error404() {
         <meta name="robots" content="noindex, nofollow" />
 
         {/* Canonical fallback */}
-        <link rel="canonical" href="https://webostic.in/" />
+        <link rel="canonical" href="https://www.webostic.in/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="404 - Page Not Found | WebOstic" />
@@ -38,7 +38,7 @@ export default function Error404() {
           content="This page doesn’t exist. Return to WebOstic homepage for web development services and content."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://webostic.in/404" />
+        <meta property="og:url" content="https://www.webostic.in/404" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />

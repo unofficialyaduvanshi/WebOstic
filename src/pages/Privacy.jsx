@@ -23,7 +23,7 @@ export default function Privacy() {
           name="description"
           content="Read WebOstic's Privacy Policy to understand how we collect, use, and protect your personal data."
         />
-        <link rel="canonical" href="https://webostic.in/privacy" />
+        <link rel="canonical" href="https://www.webostic.in/privacy" />
       </Helmet>
 
       <div className="relative min-h-screen overflow-hidden pt-20">

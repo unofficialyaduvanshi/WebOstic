@@ -989,7 +989,7 @@ const BlogPost = () => {
       {
         "@type": "Organization",
         name: "Webostic",
-        url: "https://webostic.in",
+        url: "https://www.webostic.in",
       },
     ],
     description: postMeta.description,

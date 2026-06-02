@@ -23,7 +23,7 @@ export default function Terms() {
           name="description"
           content="Read WebOstic Terms & Conditions to understand the rules and responsibilities."
         />
-        <link rel="canonical" href="https://webostic.in/terms" />
+        <link rel="canonical" href="https://www.webostic.in/terms" />
       </Helmet>
 
       <div className="relative min-h-screen overflow-hidden pt-20">
