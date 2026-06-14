@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "https://webostic.in/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "webostic.in"
+        }
+      ],
       "destination": "https://www.webostic.in/:path*",
       "permanent": true
     }
