@@ -262,6 +262,7 @@ import { Icon } from "lucide-react";
 import { I } from "../components/Icon";
 import portfolioImg from "../assets/harshportfolio.jpg";
 import namoImg from "../assets/namo.jpg";
+import velcorImg from "../assets/velcor.jpg";
 
 import {
   User,
