@@ -453,9 +453,20 @@ export const PROJECTS_ITEMS = [
 
   {
     id: 2,
+    title: "Velcor ai",
+    cat: "B2B Services",
+    tags: ["React", "Tailwind", "B2B"],
+    img: velcorImg,
+    live: "https://www.velcor.ai/",
+    color: "135deg,#6d28d9,#1d8cf8",
+    desc: "Services sold to other businesses.",
+  },
+
+  {
+    id: 3,
     title: "Namo Production",
     cat: "Business",
-    tags: ["HTML", "CSS", "Landing"],
+    tags: ["React", "Tailwind", "Landing"],
     img: namoImg,
     live: "https://lazyboyharsh.github.io/namo-production/index.html",
     color: "135deg,#6d28d9,#1d8cf8",
@@ -463,7 +474,7 @@ export const PROJECTS_ITEMS = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "TechFlow SaaS",
     cat: "Business",
     tags: ["React", "Node.js", "Tailwind"],
@@ -472,7 +483,7 @@ export const PROJECTS_ITEMS = [
     desc: "SaaS dashboard with real-time analytics & billing.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Luxe Fashion Store",
     cat: "E-commerce",
     tags: ["Next.js", "Firebase", "Stripe"],
@@ -481,7 +492,7 @@ export const PROJECTS_ITEMS = [
     desc: "High-end fashion store with AR try-on feature.",
   },
   {
-    id: 5,
+    id: 6,
     title: "ArchViz 3D Showcase",
     cat: "3D",
     tags: ["Three.js", "GSAP", "WebGL"],
@@ -490,7 +501,7 @@ export const PROJECTS_ITEMS = [
     desc: "Immersive 3D architecture visualization website.",
   },
   {
-    id: 6,
+    id: 7,
     title: "GreenBite Restaurant",
     cat: "Landing",
     tags: ["HTML5", "CSS3", "JavaScript"],
@@ -499,7 +510,7 @@ export const PROJECTS_ITEMS = [
     desc: "Restaurant site with online ordering & reservations.",
   },
   {
-    id: 7,
+    id: 8,
     title: "CryptoVault Dash",
     cat: "Business",
     tags: ["React", "REST API", "Chart.js"],
@@ -508,7 +519,7 @@ export const PROJECTS_ITEMS = [
     desc: "Crypto portfolio tracker with live charts & alerts.",
   },
   {
-    id: 8,
+    id: 9,
     title: "Orbis Brand Identity",
     cat: "Branding",
     tags: ["Figma", "Illustrator", "Brand"],
