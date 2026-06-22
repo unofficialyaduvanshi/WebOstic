@@ -190,37 +190,52 @@ export default function Footer() {
             </p>
 
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              {[I.Tw, I.Li, I.Ig, I.Gh].map((Ic, i) => (
-                <a
-                  key={i}
-                  // href="#"
-                  style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: 9,
-                    background: "var(--card2)",
-                    border: "1px solid var(--border)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--fg2)",
-                    transition: "all .2s",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(29,140,248,.15)";
-                    e.currentTarget.style.color = "var(--primary)";
-                    e.currentTarget.style.borderColor = "rgba(29,140,248,.3)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "var(--card2)";
-                    e.currentTarget.style.color = "var(--fg2)";
-                    e.currentTarget.style.borderColor = "var(--border)";
-                  }}
-                >
-                  <Ic size={15} />
-                </a>
-              ))}
+              {
+                // [I.Tw, I.Li, I.Ig, I.Gh].map((Ic, i) => (
+                [
+                  {
+                    icon: I.Ig,
+                    link: "https://www.instagram.com/webostic",
+                  },
+                  {
+                    icon: I.Li,
+                    link: "https://www.linkedin.com/company/webostic",
+                  },
+                ].map(({ icon: Ic, link }, i) => (
+                  <a
+                    key={i}
+                    // href="#"
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      width: 36,
+                      height: 36,
+                      borderRadius: 9,
+                      background: "var(--card2)",
+                      border: "1px solid var(--border)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "var(--fg2)",
+                      transition: "all .2s",
+                      textDecoration: "none",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "rgba(29,140,248,.15)";
+                      e.currentTarget.style.color = "var(--primary)";
+                      e.currentTarget.style.borderColor = "rgba(29,140,248,.3)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "var(--card2)";
+                      e.currentTarget.style.color = "var(--fg2)";
+                      e.currentTarget.style.borderColor = "var(--border)";
+                    }}
+                  >
+                    <Ic size={15} />
+                  </a>
+                ))
+              }
             </div>
           </div>
 
